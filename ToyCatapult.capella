@@ -44,6 +44,16 @@
           id="f5cd9a6a-d236-43aa-8e68-c3717a9da7d5" name="Operational Activities">
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
             id="269db18d-eee6-4172-9551-72ef2069f4e7" name="Root Operational Activity">
+          <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.oa:OperationalProcess"
+              id="b0fb6b0b-6583-414a-bfbf-cd26a447a38c" name="Play Process">
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="d36b1207-35c2-45f6-96ef-0663f8ad0def" involved="#3df61f67-3791-4518-b266-718ee57c110f"
+                source="#4ed05ed6-a0fd-453d-b228-54c7b9f4ec99" target="#66e4bde6-e7a3-452d-9142-163a436be0bb"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="66e4bde6-e7a3-452d-9142-163a436be0bb" involved="#17054a9c-3858-4963-91f4-e80d8fac762d"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="4ed05ed6-a0fd-453d-b228-54c7b9f4ec99" involved="#eaf0a393-b756-4d30-a300-2e706ab188c4"/>
+          </ownedFunctionalChains>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="5406173e-2db4-4eb4-978b-bd1b41aec618" name="Retrieve toy from storage"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
