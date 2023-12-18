@@ -394,6 +394,8 @@
               id="7eb3950b-db0b-4bf1-b2a4-403ba8726237" name="Return toy to storage">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="92269bc6-3139-4c2a-a91e-a2b289661ada" name="inToy abandoned in play area"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="7ce899cc-f928-47f6-ac2d-25ba4d08385b" name="FOP 1"/>
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="22e57655-a626-4354-9a57-e49f4c2a06dc" targetElement="#17054a9c-3858-4963-91f4-e80d8fac762d"
                 sourceElement="#7eb3950b-db0b-4bf1-b2a4-403ba8726237"/>
@@ -451,6 +453,8 @@
               id="c7de4150-82d4-453d-97f8-51a008535b89" name="Fly and land">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="b8758749-ca75-4e7c-b922-3d3b219be692" name="FIP 1"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="9199ec55-7603-4757-bf7d-9f1a9bb72ef3" name="FIP 2"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="c50a4ff6-4119-4048-835c-7367b7279891" name="Position catapult beside toy train track">
@@ -642,6 +646,9 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="038083dc-5300-4f0a-b9a6-3813cb062db3" name="Catapult Disarmed" target="#df14b83e-1926-4b1d-abe9-099ac212a1d8"
               source="#deea319d-a69b-4e98-9ba8-d669ca6890e0"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="1cad5806-fe31-4dcf-8aec-0ae4d455487a" name="Toy abandoned in play area"
+              target="#9199ec55-7603-4757-bf7d-9f1a9bb72ef3" source="#7ce899cc-f928-47f6-ac2d-25ba4d08385b"/>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
