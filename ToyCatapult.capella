@@ -399,6 +399,23 @@
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="b5e5edb8-279b-4117-aaa4-ccdd3d88cf65" name="FOP 1"/>
           </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="e695b2bf-f0e9-49cb-92da-508ebb95f2df" name="Attempt to load pet gerbil as projectile">
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="b8a20645-1fb6-481e-9a31-6e4e15f6e537" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="5cfc48cc-b5ab-4d7f-97e9-286dcaf84118" name="Limit size of projectiles accepted">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="cd4a0d75-9715-457a-b1ee-d07d4d859e9e" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="e7be91aa-41df-4c03-8454-bc1783a32ce7" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="bb2b7a42-b4d7-44b7-8216-c7827b01239e" name="Escape catapult">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="a643e150-e671-47e2-b203-f957756ac16d" name="FIP 1"/>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="16b3cd3a-b5dd-4f32-bcad-92eb4de253f8" targetElement="#269db18d-eee6-4172-9551-72ef2069f4e7"
               sourceElement="#da73caf8-9cf6-494a-993c-c279484c13c2"/>
@@ -463,6 +480,12 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="0c2b171c-2847-4e2b-be24-efabe64ae773" name="Catapult disarmed" target="#21d44bf0-cb7d-4eea-9a7c-dd9d358e7e4e"
               source="#b5e5edb8-279b-4117-aaa4-ccdd3d88cf65"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="6c5b732e-91f0-4d57-a7ae-7f4c98e345ca" name="Pet gerbil" target="#cd4a0d75-9715-457a-b1ee-d07d4d859e9e"
+              source="#b8a20645-1fb6-481e-9a31-6e4e15f6e537"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="82cdc7f8-0513-49fc-b3fa-23666f682fca" name="Catapult access denied"
+              target="#a643e150-e671-47e2-b203-f957756ac16d" source="#e7be91aa-41df-4c03-8454-bc1783a32ce7"/>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
@@ -606,6 +629,8 @@
             name="Child" abstractType="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="3c32bccd-6790-4931-a0a1-16e5ebe31ac7"
             name="Projectile" abstractType="#d1549869-4adc-40f7-bff1-cd4ebfb6c7d4"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="5fdb8f4f-e52b-4a26-9683-3b059d7c0985"
+            name="Pet gerbil" abstractType="#9bcf351e-c510-45e4-9dcc-9fd3c88f1143"/>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="4dc9ac98-da39-48cb-83c4-b4c0891522fc" name="System">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
@@ -631,6 +656,9 @@
               sourceElement="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="0dc4f3e1-3a9a-480a-b2c6-5cd93de8b107" targetElement="#c882164a-bbdb-481a-85ad-901788ca7164"
+              sourceElement="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="26441be3-9662-458d-972b-26d1f5cd49b6" targetElement="#5cfc48cc-b5ab-4d7f-97e9-286dcaf84118"
               sourceElement="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
           <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
               id="acde9d24-07c7-443e-b0ea-5b6b1651cdc8" name="System State Machine">
@@ -697,6 +725,9 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="872caf8c-15ea-4ce1-8d69-e277390e1bef" targetElement="#17038b95-da3d-4725-a28e-43cb49b731b3"
               sourceElement="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="0e126eef-af53-4657-8a1d-502beb27201b" targetElement="#e695b2bf-f0e9-49cb-92da-508ebb95f2df"
+              sourceElement="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="9ec548c2-e47a-43de-ba19-05624f2ef327" targetElement="#7a727db2-44ff-4d02-848b-05b398c04997"
               sourceElement="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
@@ -718,6 +749,12 @@
           <ownedGeneralizations xsi:type="org.polarsys.capella.core.data.capellacore:Generalization"
               id="e2f1de5c-d640-4694-acb5-cfbf13152d63" super="#79f4ca50-458f-4826-a427-7307061174fa"
               sub="#d1549869-4adc-40f7-bff1-cd4ebfb6c7d4"/>
+        </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="9bcf351e-c510-45e4-9dcc-9fd3c88f1143" name="Pet gerbil" actor="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="87639d03-074f-44e8-959a-7e928a5ebdba" targetElement="#bb2b7a42-b4d7-44b7-8216-c7827b01239e"
+              sourceElement="#9bcf351e-c510-45e4-9dcc-9fd3c88f1143"/>
         </ownedSystemComponents>
       </ownedSystemComponentPkg>
       <ownedMissionPkg xsi:type="org.polarsys.capella.core.data.ctx:MissionPkg" id="a74901d8-fe76-4b82-b419-b2f9ab8ce477"
