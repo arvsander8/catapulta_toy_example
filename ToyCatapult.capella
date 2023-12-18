@@ -243,13 +243,97 @@
           id="07a8c99b-0c6b-4da6-bef7-b150032fa107" name="System Functions">
         <ownedSystemFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
             id="da73caf8-9cf6-494a-993c-c279484c13c2" name="Root System Function">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="b08638e2-5b93-4d80-8faf-6705b2cfc6f0" name="Retrieve toy from storage">
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="291a60d6-611f-46f9-b90d-5b265032ab38" name="outToy moved to play area"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="260316f3-0eff-489d-af1f-1615bc707943" name="outToy transferred to Parent"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="4dd6c8ba-7343-4e54-9d77-76a32c3ce93f" targetElement="#5406173e-2db4-4eb4-978b-bd1b41aec618"
+                sourceElement="#b08638e2-5b93-4d80-8faf-6705b2cfc6f0"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="b9c9921d-66b8-48e8-854e-436be8b5eaca" name="Play with toy">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="c494ea7d-529f-4cd3-b132-c4abf2c0eb58" name="inToy moved to play area"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="82eb8a0e-ba0f-416a-b5a5-82144233019b" name="inToy Transferred to Child"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="ab4cb2f7-37ae-454c-a576-215e4fc3ae34" name="outToy abandoned in play area"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="470c90ad-c365-4ce6-8374-5652b73fc187" targetElement="#eaf0a393-b756-4d30-a300-2e706ab188c4"
+                sourceElement="#b9c9921d-66b8-48e8-854e-436be8b5eaca"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="7eb3950b-db0b-4bf1-b2a4-403ba8726237" name="Return toy to storage">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="92269bc6-3139-4c2a-a91e-a2b289661ada" name="inToy abandoned in play area"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="22e57655-a626-4354-9a57-e49f4c2a06dc" targetElement="#17054a9c-3858-4963-91f4-e80d8fac762d"
+                sourceElement="#7eb3950b-db0b-4bf1-b2a4-403ba8726237"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="5514afbd-a325-404c-8f19-3b2f0fe74447" name="Demostrate Novel use of Toy">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="16290f3c-d926-4146-a44f-45b4b9c1db69" name="inToy transferred to Parent"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="e4123fa5-4d1a-48d1-b96f-86848c9a03ce" name="outToy Transferred to Child"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="0ae62b37-8a09-4d4a-bd6c-f5fc3a681826" targetElement="#cb2b80d1-717e-45fa-9e32-355fb0c2afcc"
+                sourceElement="#5514afbd-a325-404c-8f19-3b2f0fe74447"/>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="16b3cd3a-b5dd-4f32-bcad-92eb4de253f8" targetElement="#269db18d-eee6-4172-9551-72ef2069f4e7"
               sourceElement="#da73caf8-9cf6-494a-993c-c279484c13c2"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="909f5bb0-77b5-458a-9662-617c3b057b99" name="Toy moved to play area"
+              target="#c494ea7d-529f-4cd3-b132-c4abf2c0eb58" source="#291a60d6-611f-46f9-b90d-5b265032ab38">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="97ce187d-5c11-43b1-8f52-85dbf0645cc7" targetElement="#2ce9507e-f7ad-4ceb-8ed1-857dd1c9d42e"
+                sourceElement="#909f5bb0-77b5-458a-9662-617c3b057b99"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="57243d08-1b29-4bf8-a8e0-81cc770f1167" name="Toy abandoned in play area"
+              target="#92269bc6-3139-4c2a-a91e-a2b289661ada" source="#ab4cb2f7-37ae-454c-a576-215e4fc3ae34">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="bb7c9205-2430-4ca4-a978-c0387650a436" targetElement="#3df61f67-3791-4518-b266-718ee57c110f"
+                sourceElement="#57243d08-1b29-4bf8-a8e0-81cc770f1167"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="d67ebd6c-35cd-4887-859d-8e89d7ec8a6c" name="Toy transferred to Parent"
+              target="#16290f3c-d926-4146-a44f-45b4b9c1db69" source="#260316f3-0eff-489d-af1f-1615bc707943">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="1918ce8f-38ab-4d79-84dd-d7f81d3c9060" targetElement="#69a96f59-edf7-44b5-8706-9ffd1281ae83"
+                sourceElement="#d67ebd6c-35cd-4887-859d-8e89d7ec8a6c"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="63b84228-b868-47d7-93a5-31048f0d0320" name="Toy Transferred to Child"
+              target="#82eb8a0e-ba0f-416a-b5a5-82144233019b" source="#e4123fa5-4d1a-48d1-b96f-86848c9a03ce">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="0f194146-be92-45e8-8cf6-0d9b30e8841f" targetElement="#b0256f74-66e2-4d9f-bc18-95448b3592b1"
+                sourceElement="#63b84228-b868-47d7-93a5-31048f0d0320"/>
+          </ownedFunctionalExchanges>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
-          id="efc97bc5-cf73-4da3-aaf6-097dcd4ea878" name="Capabilities"/>
+          id="efc97bc5-cf73-4da3-aaf6-097dcd4ea878" name="Capabilities">
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="e89023f5-7415-4791-a7ef-b4ec577d8003" name="Entertain Child">
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="ae12c045-cc4c-4bea-8ed5-4dac44e276f2" involved="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
+        </ownedCapabilities>
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="f5982e37-6dee-422d-81c1-882e2b8e2277" name="Engage parent">
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="ddcef36a-2a61-4bc0-82a5-bec3768a6632" involved="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
+        </ownedCapabilities>
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="65095848-c984-4571-b37f-ed57b9f416b9" name="Provide safety">
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="e487a6c9-6501-411c-8882-10f4e284263d" involved="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
+        </ownedCapabilities>
+      </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="2042c119-1665-4b8b-9fbc-fd3a684bcb53" name="Interfaces"/>
       <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
@@ -349,8 +433,30 @@
       </ownedDataPkg>
       <ownedSystemComponentPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemComponentPkg"
           id="3f352ac6-ba21-4e21-b234-e547a75cec03" name="Structure">
+        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+            id="e017f6e1-73a4-409f-b52e-0589638f1f3d" targetElement="#7dee8f3d-43a6-4376-b1b6-452ee25a5d63"
+            sourceElement="#66b6f2fe-75b4-47e6-90f2-3cb79b275e32"/>
+        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+            id="502d9fb6-485a-42d2-943d-729fa4a72988" targetElement="#580b58c0-b660-486d-a6e1-2402f69658a6"
+            sourceElement="#e0029ed6-8fb2-4fcf-a333-1918328e2668"/>
+        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+            id="883a6041-0336-46c9-9de1-39271de7afd8" targetElement="#54b804b5-8e2b-46d7-a49b-60d9d108a2ee"
+            sourceElement="#faeb15f0-d0f2-40f1-8657-0a3b073437d6"/>
+        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+            id="fa424f50-d852-48f7-8fc4-b27a22f4e80e" targetElement="#5f51bdcf-51b9-4447-8bb2-e2f98570b8c3"
+            sourceElement="#96fa592e-0f6f-439a-998c-233b43b6320a"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="3eee48ef-592c-459d-937a-762cf765d380"
             name="System" abstractType="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="96fa592e-0f6f-439a-998c-233b43b6320a"
+            name="Toy Train" abstractType="#67eec0d2-7bff-4ce6-b206-d02e9e090944"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="66b6f2fe-75b4-47e6-90f2-3cb79b275e32"
+            name="Parent" abstractType="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="e0029ed6-8fb2-4fcf-a333-1918328e2668"
+            name="Toy" abstractType="#79f4ca50-458f-4826-a427-7307061174fa"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="faeb15f0-d0f2-40f1-8657-0a3b073437d6"
+            name="Child" abstractType="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="3c32bccd-6790-4931-a0a1-16e5ebe31ac7"
+            name="Projectile" abstractType="#d1549869-4adc-40f7-bff1-cd4ebfb6c7d4"/>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="4dc9ac98-da39-48cb-83c4-b4c0891522fc" name="System">
           <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
@@ -359,9 +465,83 @@
                 id="36f65deb-b502-492f-83be-57b66c691d98" name="Default Region"/>
           </ownedStateMachines>
         </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="67eec0d2-7bff-4ce6-b206-d02e9e090944" name="Toy Train" actor="true">
+          <ownedGeneralizations xsi:type="org.polarsys.capella.core.data.capellacore:Generalization"
+              id="e20b127a-10f2-4401-b06a-b0d32557585c" super="#79f4ca50-458f-4826-a427-7307061174fa"
+              sub="#67eec0d2-7bff-4ce6-b206-d02e9e090944"/>
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="c3a85e26-fce5-4f7e-ba11-b4f82ae70b40" targetElement="#8f3599c9-860f-4cd7-ab65-fa2c46a52762"
+              sourceElement="#67eec0d2-7bff-4ce6-b206-d02e9e090944"/>
+        </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="686f8e7e-7d8c-4452-8a98-fc7622176f24" name="Parent" actor="true">
+          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+              id="b7733d44-f826-4f85-b98a-dfe3c83d6f62" targetElement="#c75a1541-242b-42f6-a1c9-081a440f8dd8"
+              sourceElement="#7b0e078e-d88f-4893-a50e-00e517f36f8b"/>
+          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+              id="75eb28cf-1e35-4db1-9cde-81de74c8c050" targetElement="#89e280aa-122d-4cf9-acf2-e8e0a9080a53"
+              sourceElement="#ab08a641-7347-4899-b258-13fb37d368a2"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="7b0e078e-d88f-4893-a50e-00e517f36f8b" targetElement="#7eb3950b-db0b-4bf1-b2a4-403ba8726237"
+              sourceElement="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="ab08a641-7347-4899-b258-13fb37d368a2" targetElement="#5514afbd-a325-404c-8f19-3b2f0fe74447"
+              sourceElement="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="7f9bc2ad-afb1-487c-add2-4c6458b63a3c" targetElement="#f51da472-f3bc-4d81-9134-1a19b7c1f1ae"
+              sourceElement="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
+        </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="2af98a4f-db93-4fa4-a50f-e5003b3ff936" name="Child" actor="true">
+          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+              id="bfef9145-d22f-4b3a-9a3f-b2ed39722293" targetElement="#80d39ada-8f91-435d-881a-6d4199b0ab93"
+              sourceElement="#796735e1-8a6d-458c-8559-38f3af4a1d39"/>
+          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+              id="455cf828-51eb-4a21-8ded-90b411da5e69" targetElement="#4ec076e0-f5c6-4d0c-bb98-a22b0f40275d"
+              sourceElement="#6622896a-1bb4-4136-b3ea-56091b45a08b"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="796735e1-8a6d-458c-8559-38f3af4a1d39" targetElement="#b08638e2-5b93-4d80-8faf-6705b2cfc6f0"
+              sourceElement="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="6622896a-1bb4-4136-b3ea-56091b45a08b" targetElement="#b9c9921d-66b8-48e8-854e-436be8b5eaca"
+              sourceElement="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="9ec548c2-e47a-43de-ba19-05624f2ef327" targetElement="#7a727db2-44ff-4d02-848b-05b398c04997"
+              sourceElement="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
+        </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="79f4ca50-458f-4826-a427-7307061174fa" name="Toy" actor="true">
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="67860281-86fe-48b1-aa2e-dc17d2ddbf5c" targetElement="#ac918aae-95ea-4d7d-8eed-e30cf0b47f0b"
+              sourceElement="#79f4ca50-458f-4826-a427-7307061174fa"/>
+        </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="d1549869-4adc-40f7-bff1-cd4ebfb6c7d4" name="Projectile" actor="true">
+          <ownedGeneralizations xsi:type="org.polarsys.capella.core.data.capellacore:Generalization"
+              id="e2f1de5c-d640-4694-acb5-cfbf13152d63" super="#79f4ca50-458f-4826-a427-7307061174fa"
+              sub="#d1549869-4adc-40f7-bff1-cd4ebfb6c7d4"/>
+        </ownedSystemComponents>
       </ownedSystemComponentPkg>
       <ownedMissionPkg xsi:type="org.polarsys.capella.core.data.ctx:MissionPkg" id="a74901d8-fe76-4b82-b419-b2f9ab8ce477"
-          name="Missions"/>
+          name="Missions">
+        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+            id="9635a6e1-b4a3-449e-a73e-8a922f9936e6" targetElement="#8b436561-06fb-41cc-8cc8-dd135fdfb6ec"
+            sourceElement="#23807d6f-e5b6-4187-a3d6-082ee769e16e"/>
+        <ownedMissions xsi:type="org.polarsys.capella.core.data.ctx:Mission" id="23807d6f-e5b6-4187-a3d6-082ee769e16e"
+            name="Entertain Child and Parent" summary="Amuse a 4-year-old child safely creating an opportunity for parent and child to play together in a way that delights them both">
+          <ownedMissionInvolvements xsi:type="org.polarsys.capella.core.data.ctx:MissionInvolvement"
+              id="3ff93a27-9af0-4d8d-a88f-4846ac62c440" involved="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
+          <ownedMissionInvolvements xsi:type="org.polarsys.capella.core.data.ctx:MissionInvolvement"
+              id="ede1b8a3-dc41-4e6b-9d2e-60be57cbca70" involved="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="e69395de-b269-4837-8967-847ca1e9ec43" capability="#e89023f5-7415-4791-a7ef-b4ec577d8003"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="4953499b-2195-4cbe-95c2-42f77ed1fb5a" capability="#f5982e37-6dee-422d-81c1-882e2b8e2277"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="e4cc26e2-5a43-4cbf-ae32-a86021efea34" capability="#65095848-c984-4571-b37f-ed57b9f416b9"/>
+        </ownedMissions>
+      </ownedMissionPkg>
       <ownedOperationalAnalysisRealizations xsi:type="org.polarsys.capella.core.data.ctx:OperationalAnalysisRealization"
           id="c64c7aca-3c8a-4066-ac1e-abc8fb1e8b49" targetElement="#347fe572-9374-4266-9fb4-ce185e6fca6a"
           sourceElement="#f1ecbc58-9174-4d95-94f8-404a00af1f41"/>
