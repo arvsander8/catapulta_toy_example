@@ -423,27 +423,6 @@
                 id="5eeaea55-3421-4173-ae85-2e77321bfed9" name="FOP 1"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="523107e9-4807-4fa4-860d-d16791644254" name="Store energy">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="ffa0267a-4381-4810-9c60-514ecb8b5692" name="FIP 1"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="986b59ac-bc4a-497f-abdd-37aa667d4861" name="FOP 1"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="58fa9fd1-d2ac-4d2a-b7d2-a8d26e3a3b6a" name="Detect energy limit">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="75cbe6c0-9fbe-45e8-a3a4-a6a0574be4f7" name="FIP 1"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="235d186f-ffdc-49e0-be7f-1184895d5919" name="FOP 1"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="3185e76b-ccdd-4bf6-bfb9-56d659c557ae" name="Arm system">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="96127c3f-a679-4b6c-baa1-af2a37af0442" name="FIP 1"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="14c30cba-f529-45f9-af8c-a937c4f0d1f7" name="FOP 1"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="f891e752-09ce-4525-8d08-add21ea52dad" name="Load projectile">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="fb424cc5-34d3-49b7-b44d-ce137e3c4c6d" name="FIP 1"/>
@@ -457,11 +436,6 @@
                 id="a7b0ba5d-1f2f-418b-8e3a-04b415c8babf" name="FOP 4"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="edcda5eb-937a-4593-a919-8a234a61b4e6" name="Hold projectile">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="77717310-a3f4-49ef-aa50-d597352e865e" name="FIP 1"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="e5f665ac-ac06-477f-b78b-10d3702f1c44" name="Rest in toy">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="28f80824-38ff-4ad6-bbf8-10c502c713a2" name="FIP 1"/>
@@ -472,33 +446,6 @@
                 id="276ab077-ba3d-4670-9f0e-ba84e5d51154" name="FIP 1"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="1c6aa211-4bc2-4756-8d32-fee8a9674bdc" name="FOP 1"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="443c93b5-21cd-4ba6-8bf4-f0d5215a0f45" name="Detect release command from child">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="606fdf0f-e2d5-407f-8160-194f5d984531" name="FIP 1"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="06c21a85-a7b4-48e3-90bf-83e44b4e30d3" name="FOP 2"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="deea319d-a69b-4e98-9ba8-d669ca6890e0" name="FOP 3"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="6d9dda5b-4797-4da2-bb48-8c583f74ef1d" name="Transfer energy to projectile">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="21d44bf0-cb7d-4eea-9a7c-dd9d358e7e4e" name="FIP 2"/>
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="4e9efc0a-7fbb-49d6-aa18-697c753ca288" name="FIP 3"/>
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="df14b83e-1926-4b1d-abe9-099ac212a1d8" name="FIP 4"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="03ee6055-be43-43a0-b411-9f3b55ef21fe" name="FOP 1"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="6bb6c4f9-a84e-4730-a7a9-484887b503e8" name="Launch projectile">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="4b84c16c-be65-4a06-90cc-db6f3b3f5c26" name="FIP 1"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="c1d1f575-b724-488c-8797-166b195a53ee" name="FOP 1"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="c7de4150-82d4-453d-97f8-51a008535b89" name="Fly and land">
@@ -534,28 +481,102 @@
                 id="d118abf6-3ebe-46d8-a2d8-7b0e5151ea4b" name="FOP 1"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="c882164a-bbdb-481a-85ad-901788ca7164" name="Detect release command from toy train">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="82a5f44e-004c-4eb9-b35b-a8f168cfc6e5" name="FIP 1"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="b5e5edb8-279b-4117-aaa4-ccdd3d88cf65" name="FOP 1"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="e695b2bf-f0e9-49cb-92da-508ebb95f2df" name="Attempt to load pet gerbil as projectile">
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="b8a20645-1fb6-481e-9a31-6e4e15f6e537" name="FOP 1"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="5cfc48cc-b5ab-4d7f-97e9-286dcaf84118" name="Limit size of projectiles accepted">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="cd4a0d75-9715-457a-b1ee-d07d4d859e9e" name="FIP 1"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="e7be91aa-41df-4c03-8454-bc1783a32ce7" name="FOP 1"/>
-          </ownedFunctions>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="bb2b7a42-b4d7-44b7-8216-c7827b01239e" name="Escape catapult">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="a643e150-e671-47e2-b203-f957756ac16d" name="FIP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="697ea5b2-5f4a-4f9c-90c6-8c66f2ab74a5" name="Arm">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="523107e9-4807-4fa4-860d-d16791644254" name="Store energy">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="ffa0267a-4381-4810-9c60-514ecb8b5692" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="986b59ac-bc4a-497f-abdd-37aa667d4861" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="58fa9fd1-d2ac-4d2a-b7d2-a8d26e3a3b6a" name="Detect energy limit">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="75cbe6c0-9fbe-45e8-a3a4-a6a0574be4f7" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="235d186f-ffdc-49e0-be7f-1184895d5919" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="3185e76b-ccdd-4bf6-bfb9-56d659c557ae" name="Arm system">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="96127c3f-a679-4b6c-baa1-af2a37af0442" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="14c30cba-f529-45f9-af8c-a937c4f0d1f7" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="27b19514-e315-4f03-a4d5-c81e05859450" name="Stored energy level"
+                target="#75cbe6c0-9fbe-45e8-a3a4-a6a0574be4f7" source="#986b59ac-bc4a-497f-abdd-37aa667d4861"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="a26272bb-8186-4e63-a7db-2a4ac9d0dd49" name="Energy limit reached"
+                target="#96127c3f-a679-4b6c-baa1-af2a37af0442" source="#235d186f-ffdc-49e0-be7f-1184895d5919"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="c700a387-b668-453a-8e5b-ba0ebf403abf" name="Load">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="5cfc48cc-b5ab-4d7f-97e9-286dcaf84118" name="Limit size of projectiles accepted">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="cd4a0d75-9715-457a-b1ee-d07d4d859e9e" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="e7be91aa-41df-4c03-8454-bc1783a32ce7" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="edcda5eb-937a-4593-a919-8a234a61b4e6" name="Hold projectile">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="77717310-a3f4-49ef-aa50-d597352e865e" name="FIP 1"/>
+            </ownedFunctions>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="1f88f02f-bb54-434d-8b08-27907d0cbc46" name="Fire">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="443c93b5-21cd-4ba6-8bf4-f0d5215a0f45" name="Detect release command from child">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="606fdf0f-e2d5-407f-8160-194f5d984531" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="06c21a85-a7b4-48e3-90bf-83e44b4e30d3" name="FOP 2"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="deea319d-a69b-4e98-9ba8-d669ca6890e0" name="FOP 3"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="c882164a-bbdb-481a-85ad-901788ca7164" name="Detect release command from toy train">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="82a5f44e-004c-4eb9-b35b-a8f168cfc6e5" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="b5e5edb8-279b-4117-aaa4-ccdd3d88cf65" name="FOP 1"/>
+            </ownedFunctions>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="750e7d66-71df-4933-af69-93b0cfcded00" name="Launch">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="6d9dda5b-4797-4da2-bb48-8c583f74ef1d" name="Transfer energy to projectile">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="21d44bf0-cb7d-4eea-9a7c-dd9d358e7e4e" name="FIP 2"/>
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="4e9efc0a-7fbb-49d6-aa18-697c753ca288" name="FIP 3"/>
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="df14b83e-1926-4b1d-abe9-099ac212a1d8" name="FIP 4"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="03ee6055-be43-43a0-b411-9f3b55ef21fe" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="6bb6c4f9-a84e-4730-a7a9-484887b503e8" name="Launch projectile">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="4b84c16c-be65-4a06-90cc-db6f3b3f5c26" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="c1d1f575-b724-488c-8797-166b195a53ee" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="3cbfe773-942e-44f4-8a60-3eb0df035a5c" name="Energy transfer complete"
+                target="#4b84c16c-be65-4a06-90cc-db6f3b3f5c26" source="#03ee6055-be43-43a0-b411-9f3b55ef21fe"/>
           </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="16b3cd3a-b5dd-4f32-bcad-92eb4de253f8" targetElement="#269db18d-eee6-4172-9551-72ef2069f4e7"
@@ -574,12 +595,6 @@
               id="c317f64f-deaa-477d-b905-39a7dc0de395" name="Energy from child" target="#ffa0267a-4381-4810-9c60-514ecb8b5692"
               source="#7e064deb-2739-479e-98a6-752f9e04b630"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="27b19514-e315-4f03-a4d5-c81e05859450" name="Stored energy level"
-              target="#75cbe6c0-9fbe-45e8-a3a4-a6a0574be4f7" source="#986b59ac-bc4a-497f-abdd-37aa667d4861"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="a26272bb-8186-4e63-a7db-2a4ac9d0dd49" name="Energy limit reached"
-              target="#96127c3f-a679-4b6c-baa1-af2a37af0442" source="#235d186f-ffdc-49e0-be7f-1184895d5919"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="d11c3cba-6e46-4398-a88b-6a6b6fcb47bd" name="System armed" target="#c4016c8e-34f1-4be1-a928-9307d93777df"
               source="#14c30cba-f529-45f9-af8c-a937c4f0d1f7"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
@@ -597,9 +612,6 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="19458073-0c77-4ce9-b3a9-92760646387f" name="Release command" target="#606fdf0f-e2d5-407f-8160-194f5d984531"
               source="#1c6aa211-4bc2-4756-8d32-fee8a9674bdc"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="3cbfe773-942e-44f4-8a60-3eb0df035a5c" name="Energy transfer complete"
-              target="#4b84c16c-be65-4a06-90cc-db6f3b3f5c26" source="#03ee6055-be43-43a0-b411-9f3b55ef21fe"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="d492e4f0-3360-4fbc-a84c-9b486988c7a5" name="Energy transferred"
               target="#b8758749-ca75-4e7c-b922-3d3b219be692" source="#c1d1f575-b724-488c-8797-166b195a53ee"/>
