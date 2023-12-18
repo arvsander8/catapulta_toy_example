@@ -318,6 +318,8 @@
                 id="fc75ad2e-f8c4-4110-b8b3-bdc6e679d628" name="FOP 2"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="abdc075f-ffb8-46fa-ad25-a5926134981b" name="FOP 3"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="a7b0ba5d-1f2f-418b-8e3a-04b415c8babf" name="FOP 4"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="edcda5eb-937a-4593-a919-8a234a61b4e6" name="Hold projectile">
@@ -346,7 +348,7 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="6d9dda5b-4797-4da2-bb48-8c583f74ef1d" name="Transfer energy to projectile">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="f8085680-e1e1-408e-97f5-aeffa5ca0a17" name="FIP 1"/>
+                id="21d44bf0-cb7d-4eea-9a7c-dd9d358e7e4e" name="FIP 2"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="03ee6055-be43-43a0-b411-9f3b55ef21fe" name="FOP 1"/>
           </ownedFunctions>
@@ -361,6 +363,41 @@
               id="c7de4150-82d4-453d-97f8-51a008535b89" name="Fly and land">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="b8758749-ca75-4e7c-b922-3d3b219be692" name="FIP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="c50a4ff6-4119-4048-835c-7367b7279891" name="Position catapult beside toy train track">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="95f64411-2e7b-4b09-93db-ac320c533d81" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="6c1a8a18-d868-4be1-b02b-6ba53e49cc61" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="a593c337-b8f7-4afe-8cb2-dcc4cd67a4a8" name="Start toy train">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="19f82027-e31a-461e-889d-2f5b751470d0" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="303d9bc7-b922-4326-874b-8098f4ee969f" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="a05adfb4-396a-40e6-809a-664975a1f4fe" name="Travel around track">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="1904ff41-1680-4870-ad4c-40dda7225dec" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="b89066ea-8d95-415c-8ba6-d6e4b2b2f5b7" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="de699e06-d450-415d-8a0e-81a3d9423c72" name="Issue release command">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="1cf6f2df-f555-4f8a-8498-13902136e8c3" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="d118abf6-3ebe-46d8-a2d8-7b0e5151ea4b" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="c882164a-bbdb-481a-85ad-901788ca7164" name="Detect release command from toy train">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="82a5f44e-004c-4eb9-b35b-a8f168cfc6e5" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="b5e5edb8-279b-4117-aaa4-ccdd3d88cf65" name="FOP 1"/>
           </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="16b3cd3a-b5dd-4f32-bcad-92eb4de253f8" targetElement="#269db18d-eee6-4172-9551-72ef2069f4e7"
@@ -403,14 +440,29 @@
               id="19458073-0c77-4ce9-b3a9-92760646387f" name="Release command" target="#606fdf0f-e2d5-407f-8160-194f5d984531"
               source="#1c6aa211-4bc2-4756-8d32-fee8a9674bdc"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="c861f352-ba93-4dcb-8df3-e9c49bb27045" name="Catapult disarmed" target="#f8085680-e1e1-408e-97f5-aeffa5ca0a17"
-              source="#285c56cb-1d11-41b8-a1c0-b496311c5de4"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="3cbfe773-942e-44f4-8a60-3eb0df035a5c" name="Energy transfer complete"
               target="#4b84c16c-be65-4a06-90cc-db6f3b3f5c26" source="#03ee6055-be43-43a0-b411-9f3b55ef21fe"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="d492e4f0-3360-4fbc-a84c-9b486988c7a5" name="Energy transferred"
               target="#b8758749-ca75-4e7c-b922-3d3b219be692" source="#c1d1f575-b724-488c-8797-166b195a53ee"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="eeb04c0f-3b9b-4002-942d-21c0d4470563" name="System armed and loaded"
+              target="#95f64411-2e7b-4b09-93db-ac320c533d81" source="#a7b0ba5d-1f2f-418b-8e3a-04b415c8babf"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="09b903ea-0569-47b3-8279-64422ec67b58" name="Catapult in position"
+              target="#19f82027-e31a-461e-889d-2f5b751470d0" source="#6c1a8a18-d868-4be1-b02b-6ba53e49cc61"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="440f728a-bbfd-495d-8845-95ac059d4a82" name="Start train command"
+              target="#1904ff41-1680-4870-ad4c-40dda7225dec" source="#303d9bc7-b922-4326-874b-8098f4ee969f"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="c6b73b25-bb6d-4c38-b68b-809648e97108" name="Catapult encountered beside track"
+              target="#1cf6f2df-f555-4f8a-8498-13902136e8c3" source="#b89066ea-8d95-415c-8ba6-d6e4b2b2f5b7"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="4292e465-69fb-4d29-ab5f-2cb0b1ff3d23" name="Release command from toy train"
+              target="#82a5f44e-004c-4eb9-b35b-a8f168cfc6e5" source="#d118abf6-3ebe-46d8-a2d8-7b0e5151ea4b"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="0c2b171c-2847-4e2b-be24-efabe64ae773" name="Catapult disarmed" target="#21d44bf0-cb7d-4eea-9a7c-dd9d358e7e4e"
+              source="#b5e5edb8-279b-4117-aaa4-ccdd3d88cf65"/>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
@@ -577,6 +629,9 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="50932e65-49e0-4585-a87f-f306d547aad3" targetElement="#6bb6c4f9-a84e-4730-a7a9-484887b503e8"
               sourceElement="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="0dc4f3e1-3a9a-480a-b2c6-5cd93de8b107" targetElement="#c882164a-bbdb-481a-85ad-901788ca7164"
+              sourceElement="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"/>
           <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
               id="acde9d24-07c7-443e-b0ea-5b6b1651cdc8" name="System State Machine">
             <ownedRegions xsi:type="org.polarsys.capella.core.data.capellacommon:Region"
@@ -585,6 +640,12 @@
         </ownedSystemComponents>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="67eec0d2-7bff-4ce6-b206-d02e9e090944" name="Toy Train" actor="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="32288b67-24fe-47a1-bf83-d62d77a53a15" targetElement="#a05adfb4-396a-40e6-809a-664975a1f4fe"
+              sourceElement="#67eec0d2-7bff-4ce6-b206-d02e9e090944"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="5c97a001-dbcf-4e05-9944-180c29b45a80" targetElement="#de699e06-d450-415d-8a0e-81a3d9423c72"
+              sourceElement="#67eec0d2-7bff-4ce6-b206-d02e9e090944"/>
           <ownedGeneralizations xsi:type="org.polarsys.capella.core.data.capellacore:Generalization"
               id="e20b127a-10f2-4401-b06a-b0d32557585c" super="#79f4ca50-458f-4826-a427-7307061174fa"
               sub="#67eec0d2-7bff-4ce6-b206-d02e9e090944"/>
@@ -605,6 +666,12 @@
               sourceElement="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="ab08a641-7347-4899-b258-13fb37d368a2" targetElement="#5514afbd-a325-404c-8f19-3b2f0fe74447"
+              sourceElement="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="f8cd6856-fdd8-4eee-80f4-b690a6b533e4" targetElement="#c50a4ff6-4119-4048-835c-7367b7279891"
+              sourceElement="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="fcc35c23-d8ab-4aeb-8f48-bfa7517d91a3" targetElement="#a593c337-b8f7-4afe-8cb2-dcc4cd67a4a8"
               sourceElement="#686f8e7e-7d8c-4452-8a98-fc7622176f24"/>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="7f9bc2ad-afb1-487c-add2-4c6458b63a3c" targetElement="#f51da472-f3bc-4d81-9134-1a19b7c1f1ae"
