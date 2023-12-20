@@ -2415,9 +2415,25 @@
             name="Pet gerbil" abstractType="#85410f12-1797-4729-9d34-d0090e94c301"/>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="712e1e9d-31ba-4303-8ea5-365957278f85" name="Logical System">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="7a2ace46-e4c3-4951-883c-4c4e34fb632c"
+              name="Energy Storage" abstractType="#efd0017d-e1ca-465f-8e66-54825f766191"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="d43441da-56ba-4134-a53c-dc495ecff951"
+              name="Projectile Containment" abstractType="#0079a01c-f6be-45cd-a0ae-bb32853ea4c0"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="cf782d22-e9f9-4752-902b-81e989f01599"
+              name="Lock and Release" abstractType="#e912e631-a251-4e88-835e-3270d35cf828"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="2db1ab59-2103-4b9d-81c0-1b2bb3f6e85a"
+              name="Launch" abstractType="#c990be10-2ee9-460b-af43-4c0bd05cd823"/>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="29296c7a-6573-45a6-a51b-3230a9e82dc0" targetElement="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"
               sourceElement="#712e1e9d-31ba-4303-8ea5-365957278f85"/>
+          <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+              id="efd0017d-e1ca-465f-8e66-54825f766191" name="Energy Storage"/>
+          <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+              id="0079a01c-f6be-45cd-a0ae-bb32853ea4c0" name="Projectile Containment"/>
+          <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+              id="e912e631-a251-4e88-835e-3270d35cf828" name="Lock and Release"/>
+          <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
+              id="c990be10-2ee9-460b-af43-4c0bd05cd823" name="Launch"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="5ec87f3e-f70c-4dca-b139-5c4375a515e5" name="Toy Train" actor="true">
