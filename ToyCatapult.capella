@@ -2488,6 +2488,9 @@
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="bbd9de24-419c-4e0a-85da-119913b07f95" targetElement="#7aa16c86-ed32-4273-9d43-1a380f86ce39"
                 sourceElement="#e912e631-a251-4e88-835e-3270d35cf828"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="392b23b8-8ae1-46e0-8f32-b993c738c8e8" targetElement="#270a81ac-ebf5-4248-87be-84db81359d59"
+                sourceElement="#e912e631-a251-4e88-835e-3270d35cf828"/>
           </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
               id="c990be10-2ee9-460b-af43-4c0bd05cd823" name="Launch">
