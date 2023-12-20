@@ -1957,11 +1957,7 @@
                     sourceElement="#ef410cbc-12ee-4c79-8200-1b67e26965b5"/>
               </inputs>
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                  id="db7480ef-98b7-4a89-9129-dd3a62e0824e" name="FOP 1">
-                <ownedPortRealizations xsi:type="org.polarsys.capella.core.data.information:PortRealization"
-                    id="3436a276-c47e-4e2b-9bdb-d3ba9430e688" targetElement="#986b59ac-bc4a-497f-abdd-37aa667d4861"
-                    sourceElement="#db7480ef-98b7-4a89-9129-dd3a62e0824e"/>
-              </outputs>
+                  id="f2a3be9e-23c8-408d-89ed-3db63a29511a" name="FOP 1"/>
               <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                   id="51f88ea3-a99d-4c18-894a-b9b30791f08a" targetElement="#523107e9-4807-4fa4-860d-d16791644254"
                   sourceElement="#6d55d349-434c-4aa9-b547-16a3388a9b1c"/>
@@ -2005,13 +2001,6 @@
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="760ad5ff-007d-4924-80d9-47c4816a5188" targetElement="#697ea5b2-5f4a-4f9c-90c6-8c66f2ab74a5"
                 sourceElement="#46cbe2e6-068a-48b6-b3de-c7e236a14d6b"/>
-            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-                id="4c25a982-1f00-46bc-aad2-43714f3c3286" name="Stored energy level"
-                target="#0a9fa3e2-40f7-4189-afdc-bc198ef83ed3" source="#db7480ef-98b7-4a89-9129-dd3a62e0824e">
-              <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
-                  id="3407ec86-818d-4fb9-8bd1-39fd23ca8e8d" targetElement="#27b19514-e315-4f03-a4d5-c81e05859450"
-                  sourceElement="#4c25a982-1f00-46bc-aad2-43714f3c3286"/>
-            </ownedFunctionalExchanges>
             <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
                 id="a6a7a29f-1b14-4faf-9f95-c9684877a676" name="Energy limit reached"
                 target="#3b371b14-52d1-4120-b241-6ea9194c3f2a" source="#e50e4114-c989-4efa-8d65-7e370e7f8f5a">
@@ -2159,6 +2148,31 @@
                   sourceElement="#68ddf878-7ff1-4201-a6f3-b9a858c22515"/>
             </ownedFunctionalExchanges>
           </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.la:LogicalFunction"
+              id="ffac13e1-a263-4cdc-ad23-0bdec18f9587" name="Split 20" kind="SPLIT">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="5b820366-5630-4688-9f7f-70c625a1e714" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="db7480ef-98b7-4a89-9129-dd3a62e0824e" name="FOP 1">
+              <ownedPortRealizations xsi:type="org.polarsys.capella.core.data.information:PortRealization"
+                  id="3436a276-c47e-4e2b-9bdb-d3ba9430e688" targetElement="#986b59ac-bc4a-497f-abdd-37aa667d4861"
+                  sourceElement="#db7480ef-98b7-4a89-9129-dd3a62e0824e"/>
+            </outputs>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="5df09efd-5252-48f4-8b5c-a6ace7cd9e56" name="FOP 2"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.la:LogicalFunction"
+              id="ebf00981-b752-4665-9e77-80dbf79c58bf" name="Abandon toy prematurely">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="d7ed8073-49d1-4d80-a76a-407fa11b48f6" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="8b9b5142-1ebd-49fa-b73c-450645271625" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.la:LogicalFunction"
+              id="b547fb12-660c-4309-b7f4-2e62e90a5e2f" name="Release energy">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="6c284ca1-707f-4480-bca6-fa163972a4ad" name="FIP 1"/>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="6d218453-555e-4883-a22f-e8f94aec2795" targetElement="#da73caf8-9cf6-494a-993c-c279484c13c2"
               sourceElement="#f8a609b7-0a60-473f-9fdb-a6d2aeec0b6e"/>
@@ -2302,6 +2316,22 @@
                 id="c8563d00-76ec-4538-ac4f-27be36ee25f8" targetElement="#038083dc-5300-4f0a-b9a6-3813cb062db3"
                 sourceElement="#54372f56-88aa-4cff-b8d0-1e176b18ea2c"/>
           </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="4c25a982-1f00-46bc-aad2-43714f3c3286" name="Stored energy level"
+              target="#0a9fa3e2-40f7-4189-afdc-bc198ef83ed3" source="#db7480ef-98b7-4a89-9129-dd3a62e0824e">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="3407ec86-818d-4fb9-8bd1-39fd23ca8e8d" targetElement="#27b19514-e315-4f03-a4d5-c81e05859450"
+                sourceElement="#4c25a982-1f00-46bc-aad2-43714f3c3286"/>
+          </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="2e796919-9374-433b-99c3-dadaf0290990" name="Stored energy level"
+              target="#5b820366-5630-4688-9f7f-70c625a1e714" source="#f2a3be9e-23c8-408d-89ed-3db63a29511a"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="33017035-1698-4730-90c1-734bcb6bef2c" name="System partially armed"
+              target="#d7ed8073-49d1-4d80-a76a-407fa11b48f6" source="#5df09efd-5252-48f4-8b5c-a6ace7cd9e56"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="2c9f11bd-c5ee-4c64-8b31-d8d6ed7863af" name="System partially armed and abandoned"
+              target="#6c284ca1-707f-4480-bca6-fa163972a4ad" source="#8b9b5142-1ebd-49fa-b73c-450645271625"/>
         </ownedLogicalFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
@@ -2427,13 +2457,47 @@
               id="29296c7a-6573-45a6-a51b-3230a9e82dc0" targetElement="#4dc9ac98-da39-48cb-83c4-b4c0891522fc"
               sourceElement="#712e1e9d-31ba-4303-8ea5-365957278f85"/>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
-              id="efd0017d-e1ca-465f-8e66-54825f766191" name="Energy Storage"/>
+              id="efd0017d-e1ca-465f-8e66-54825f766191" name="Energy Storage">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="a8b0ee2a-8845-4dbd-8b9c-4016c166471c" targetElement="#6d55d349-434c-4aa9-b547-16a3388a9b1c"
+                sourceElement="#efd0017d-e1ca-465f-8e66-54825f766191"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="ca5d4535-7fa3-4d57-822c-3f2bf5b42cd5" targetElement="#ffac13e1-a263-4cdc-ad23-0bdec18f9587"
+                sourceElement="#efd0017d-e1ca-465f-8e66-54825f766191"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="6e2fe750-2728-4a97-8058-1736268d89de" targetElement="#b547fb12-660c-4309-b7f4-2e62e90a5e2f"
+                sourceElement="#efd0017d-e1ca-465f-8e66-54825f766191"/>
+          </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
-              id="0079a01c-f6be-45cd-a0ae-bb32853ea4c0" name="Projectile Containment"/>
+              id="0079a01c-f6be-45cd-a0ae-bb32853ea4c0" name="Projectile Containment">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="2d610550-52c0-4621-ba39-80030d540295" targetElement="#b125b82b-58e9-464f-8b5a-c471a50cd8dc"
+                sourceElement="#0079a01c-f6be-45cd-a0ae-bb32853ea4c0"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="d03e7191-1602-4eb9-ae66-b9c2d3469e07" targetElement="#1d75b9a1-d708-4ba0-93cd-f4bd4d911bf3"
+                sourceElement="#0079a01c-f6be-45cd-a0ae-bb32853ea4c0"/>
+          </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
-              id="e912e631-a251-4e88-835e-3270d35cf828" name="Lock and Release"/>
+              id="e912e631-a251-4e88-835e-3270d35cf828" name="Lock and Release">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="153c46c7-1f8b-4f66-a71d-cb3f65c6707d" targetElement="#2be4e3b5-fa3b-48c1-9356-f05e1db71d78"
+                sourceElement="#e912e631-a251-4e88-835e-3270d35cf828"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="9cf27114-9e39-4556-943d-b58dbd8a6eef" targetElement="#4c803a28-3595-45ba-8bf0-ee443602b4fe"
+                sourceElement="#e912e631-a251-4e88-835e-3270d35cf828"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="bbd9de24-419c-4e0a-85da-119913b07f95" targetElement="#7aa16c86-ed32-4273-9d43-1a380f86ce39"
+                sourceElement="#e912e631-a251-4e88-835e-3270d35cf828"/>
+          </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
-              id="c990be10-2ee9-460b-af43-4c0bd05cd823" name="Launch"/>
+              id="c990be10-2ee9-460b-af43-4c0bd05cd823" name="Launch">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="8b691cc0-6e46-42c0-9a5a-687c425508c9" targetElement="#f8462c61-ec3e-4511-9220-2117ea18cc33"
+                sourceElement="#c990be10-2ee9-460b-af43-4c0bd05cd823"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="9fc68f46-62ca-4147-94d6-6947dda3e441" targetElement="#e15279c7-4536-4875-b5e8-844afb568a2d"
+                sourceElement="#c990be10-2ee9-460b-af43-4c0bd05cd823"/>
+          </ownedLogicalComponents>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="5ec87f3e-f70c-4dca-b139-5c4375a515e5" name="Toy Train" actor="true">
@@ -2526,6 +2590,9 @@
               sourceElement="#62d4e96f-5b12-470d-9044-5f305cf0c655"/>
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="6787c430-828d-4656-937b-860af206857a" targetElement="#b6306666-b62f-4878-905b-e7ce7ca5d6c6"
+              sourceElement="#62d4e96f-5b12-470d-9044-5f305cf0c655"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="ab579590-2eb7-485e-8f91-1cd875372fd7" targetElement="#ebf00981-b752-4665-9e77-80dbf79c58bf"
               sourceElement="#62d4e96f-5b12-470d-9044-5f305cf0c655"/>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="4573b16c-9e41-4020-9dff-52e2c60f51f5" targetElement="#2af98a4f-db93-4fa4-a50f-e5003b3ff936"
