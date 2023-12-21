@@ -2576,15 +2576,15 @@
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
                 id="f86bc45a-68cc-4000-a5e9-cbea4737814d" name="Receive Call Message Call"
                 coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931" event="#60656e05-6024-41c1-b848-8090c7e25a01"/>
-            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
-                id="51498c18-40a4-4322-b4ef-0820f299d8a3" name="endExec" coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931"
-                event="#e11b7d15-d837-4dea-a7b9-3b634a518ba5"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="9015000b-7e78-4e7b-9596-e6a725f01665" name="Apply energy to toy"
                 coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931" relatedAbstractFunction="#0f95c6f5-cf7d-4e44-8342-c26cd3b0520e"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="89b821f6-a7d6-4d42-be04-fc5cca7dff66" name="Apply energy to toy"
                 coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931" relatedAbstractFunction="#0f95c6f5-cf7d-4e44-8342-c26cd3b0520e"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
+                id="51498c18-40a4-4322-b4ef-0820f299d8a3" name="endExec" coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931"
+                event="#e11b7d15-d837-4dea-a7b9-3b634a518ba5"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
                 id="7bf07781-e841-466b-b056-5f0466faa286" name="Send Call Message Call"
                 coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931" event="#02c4f099-807d-401a-85bf-ad4c6cc6f240"/>
@@ -2594,9 +2594,6 @@
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="24917f8f-6d09-44ce-ac3c-5f54dbeab644" coveredInstanceRoles="#a5664350-fb0d-4eee-a1e2-c6db656e5d6a"
                 relatedAbstractState="#ca0a963a-452d-454c-80a7-6fbb4e9a1a1a"/>
-            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
-                id="85802c16-8d77-4e54-8717-b1a554d2a224" name="endExec" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
-                event="#85730cea-486e-4b8a-a114-8562028a4820"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="b041dd42-6e5a-4d0b-9326-4cefd11db40d" name="Store energy" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
                 relatedAbstractFunction="#6d55d349-434c-4aa9-b547-16a3388a9b1c"/>
@@ -2606,48 +2603,48 @@
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="863f7701-5f09-4f44-b946-4ce86c96e49a" name="Store energy" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
                 relatedAbstractFunction="#6d55d349-434c-4aa9-b547-16a3388a9b1c"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
+                id="85802c16-8d77-4e54-8717-b1a554d2a224" name="endExec" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
+                event="#85730cea-486e-4b8a-a114-8562028a4820"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
                 id="417c8f26-5d3e-4afe-a04f-4a0a077d0d95" name="Send Call Message Call"
                 coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d" event="#6908b8df-c3c9-47e3-bc2d-8dbd0d24bf8d"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
                 id="321d10d9-a949-41cb-9c74-61d16efb8e05" name="Receive Call Message Call"
                 coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d" event="#c0d1c24b-43d2-4905-93ee-624e4201c440"/>
-            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
-                id="f88bf47e-9555-490f-a21f-8cee5333295a" name="endExec" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
-                event="#e5a18f97-39c1-46b3-a0d8-7cafa5df7394"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="8e9263ed-1d64-4120-bada-3556e66b88f2" name="Split 20" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
                 relatedAbstractFunction="#ffac13e1-a263-4cdc-ad23-0bdec18f9587"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="0c04e74e-1a8c-436a-a87b-7c7c89f64c1b" name="Split 20" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
                 relatedAbstractFunction="#ffac13e1-a263-4cdc-ad23-0bdec18f9587"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
+                id="f88bf47e-9555-490f-a21f-8cee5333295a" name="endExec" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
+                event="#e5a18f97-39c1-46b3-a0d8-7cafa5df7394"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
                 id="7e47b5f2-ae48-4c55-87c0-64e833db1c7b" name="Send Call Message Call"
                 coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d" event="#ff39e295-14f9-47eb-8f4a-315bb4502fec"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
                 id="dc825d60-9e46-415d-93f7-31f7543ef7c3" name="Receive Call Message Call"
                 coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931" event="#58978661-c6be-4c79-8475-76825a393ee8"/>
-            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
-                id="d412e099-3443-49e9-b088-3fd186488df2" name="endExec" coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931"
-                event="#2ad161de-66ad-4edb-98a3-5ad23f1c7052"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="6737f7d0-3760-4620-82f9-eb60eee417ce" name="Abandon toy prematurely"
                 coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931" relatedAbstractFunction="#ebf00981-b752-4665-9e77-80dbf79c58bf"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="89c2b0ab-5fdf-41a6-8f85-534f15d88e75" name="Abandon toy prematurely"
                 coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931" relatedAbstractFunction="#ebf00981-b752-4665-9e77-80dbf79c58bf"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
+                id="d412e099-3443-49e9-b088-3fd186488df2" name="endExec" coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931"
+                event="#2ad161de-66ad-4edb-98a3-5ad23f1c7052"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="f401e6b2-68a5-4cd1-9697-f530ba6a2c76" coveredInstanceRoles="#a5664350-fb0d-4eee-a1e2-c6db656e5d6a"
+                relatedAbstractState="#2002d1ea-048f-4694-b8e3-bac0950be7e2"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
                 id="9dd9465d-15b4-42b1-a965-bc76297cad5b" name="Send Call Message Call"
                 coveredInstanceRoles="#6a2efc0c-7f6d-46f4-a1fb-036d387b3931" event="#ecec2326-2118-4e77-ab0b-1d43fc3f18bb"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
                 id="1b90876f-3f76-43a2-9115-ce12d201e521" name="Receive Call Message Call"
                 coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d" event="#960e35ae-bd46-49bc-913f-6d424c687468"/>
-            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
-                id="f401e6b2-68a5-4cd1-9697-f530ba6a2c76" coveredInstanceRoles="#a5664350-fb0d-4eee-a1e2-c6db656e5d6a"
-                relatedAbstractState="#2002d1ea-048f-4694-b8e3-bac0950be7e2"/>
-            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
-                id="4afb63de-87c8-423a-ae69-da88837c9559" name="endExec" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
-                event="#989a95f0-7878-407a-80e8-7ba349e8745f"/>
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="0e0c94cf-5453-4d67-b014-6df3643d89db" name="Release energy" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
                 relatedAbstractFunction="#b547fb12-660c-4309-b7f4-2e62e90a5e2f"/>
@@ -2657,6 +2654,9 @@
             <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
                 id="f7f572b8-ca4c-4bb9-8f6e-6fe14fbc56d7" coveredInstanceRoles="#a5664350-fb0d-4eee-a1e2-c6db656e5d6a"
                 relatedAbstractState="#2002d1ea-048f-4694-b8e3-bac0950be7e2"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
+                id="4afb63de-87c8-423a-ae69-da88837c9559" name="endExec" coveredInstanceRoles="#dbb98724-f217-4505-a4ac-a1f841fa3a2d"
+                event="#989a95f0-7878-407a-80e8-7ba349e8745f"/>
             <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment"
                 id="edc7674d-41d0-4631-911a-1232e60361e7" start="#78e89442-c949-41a8-b3eb-83c80e63a547"
                 finish="#6eef31dc-5145-4f36-ae40-3148e8e3e847" relatedAbstractFunction="#22cac119-d519-486f-818a-9117cde675da"/>
